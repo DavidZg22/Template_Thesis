@@ -1,0 +1,131 @@
+\chapter{Introducción}
+
+\thispagestyle{empty}
+% 
+% 
+% Descripción y formulación del problema
+% 
+% 
+\section{Descripción y formulación del problema}
+Las redes neuronales se usan como buenos aproximadores de funciones, pueden aproximar soluciones de Ecuaciones Diferenciales Parciales (EDP) o Ecuaciones Diferenciales Ordinariaas (EDO). Por otro lado, los sistemas físicos se describen a partir de ecuaciones matemáticas por EDP o EDO. En este contexto, dada la característica estocástica (aprendizaje a partir de datos) del trabajo de las Redes Neuronales (RN), hay modelos de RN que son modificados dentro de su estructura para que el aprendizaje de estas no esté basado solo en los datos, sino también sean acotados mediante modelos físicos, de esta manera, existen diferentes arquitecturas que resuelven diferentes tipos de problemas; ecuación de la onda, Shrodinger, el problema de los tres cuerpos, entre otras. Dado que existen diferentes arquitecturas, el presente trabajo plantea las siguientes interrogantes  ¿Podremos implementar una red neuronal para dar solución a la ecuación de onda en dos dimensiones, e identificar qué parámetros afectan en su presición y cómo poder hacer para mejorar los resultados?
+
+% 
+% 
+% Antecedentes
+% 
+% 
+\section{Antecedentes}
+[1] Lagaris I. E. y Likas A. (1998), \propuesta{presentaron un método para resolver EDO y EDP basado en redes neuronales}. \metodo{A través de comparaciones de resolución de problemas mediante el método de elementos finitos de Galekrkin en diferentes casos de ecuaciones diferenciales parciales.}\resultados{Demostraron que la redes neuronales como aproximadores de funciones que resuelven los mismos problemas con menos costo computacional, debido a que hace uso de menos parámetros para la solución de los problemas, de la misma manera, el algoritmo es escalable a dominios  de dimensiones más altas.}\conclusiones{El método propuesto mostró un exelente rendimiento de generalización y trata más facilmente dominios superiores, por tanto es óptimo para la resolución de EDO o EDP. Se logró resolver la ecuación de Shrodinger.}
+
+[2] Raissi M. et al. (2017), \propuesta{tuvieron el objetivo de sentar las bases de un nuevo paradigma en el modelado y la computación que enriquece el aprendizaje profundo con los desarrollos de grandes datos en la física.} \metodo{En función de la naturaleza y la disposición de los datos disponibles, plantean dos clases distintas de algoritmos; modelos de tiempo continuo y de tiempo discreto.} \resultados{Las redes neuronales resultantes forman una nueva clase de aproximadores de funciones universales eficientes desde el punto de vista de los datos, que codifican de forma natural cualquier ley física subyacente como información previa.}  \conclusiones{Los algoritmos diseñados pueden aplicarse a la previsión basada en datos de procesos físicos, sin embargo no deben considerarse como sustitutos de los métodos convencionales.}
+
+[3] Moseley B. et al. (2020), \propuesta{investigaron el uso de PINN en la resolución de la ecuación de onda.} \metodo{Usaron una red neuronal profunda para aprender las soluciones de la ecuación de onda, utilizando una condición de contorno como restricción directa en la función de perdida.} \resultados{En comparación con la simulación numérica tradicional, este enfoque presentado es muy eficiente cuando se calculan puntos espacio-temporales arbitrarios en el campo de ondas, siendo capaz de generalizar fuera de su conjunto de entrenamiento. }\conclusiones{ Demostraron que las redes neuronales profundas informadas por la física son capaces de resolver la ecuación de onda y generalizar fuera de su conjunto de entrenamiento añadiendo restricciones físicas directamente a su función de pérdida.}
+
+[4] Choudhary A. et al. (2020), \propuesta{introdujeron el concepto de hamiltoniano dentro de las redes neuronales.} \metodo{Explotan la estructura hamiltoniana de los sistemas conservadores para dotar a las redes neuronales de inteligencia física necesaria para aprender la mezcla de orden y caos que suele caracterizar a los fenómenos naturales.  Aplican las redes neuronales hamiltonianas al potencial de Hénon-Heiles haciendo que el aprendizaje profundo pueda predecir la dinámica del sistema.} \conclusiones{Demostraron que, introducir el concepto de hamiltoniano en el entranamiento de una RN le da la capacidad de aprender el orden y el caos.}
+
+[5] Sun Y. et al. (2021),  \propuesta{propusieron un enfoque de aprendizaje profundo libre de datos e impulsado por la física para resolver problemas de flujo de baja velocidad y demostrar su robustez.} \metodo{En lugar de alimentar las redes neuronales con grandes datos etiquetados, explotaron las leyes físicas conocidas e incorporaron esta física en una red neuronal para hacer uso de menos datos y mejorar la precisión de la predicción.} \resultados{Se resolvieron problemas de flujo y transporte, incluyendo el flujo pasado por un cilindro, Poisson lineal, conducción de calor y el problema de vórtice de Taylor-Green.} \conclusiones{Las redes neuronales informadas por la física (PINNs) empleadas proporcionan una alternativa factible y barata para aproximar la solución de ecuaciones diferenciales con condiciones iniciales y de contorno especificadas.}
+
+% [6] Iten R. et al. (2020), 
+
+[7] Breen P.G., et al. (2019), \propuesta{plantearon dar solución al problema de los 3 cuerpos mediante RNA.}\metodo{Las RNA se entrenaron a partir de un conjunto de soluciones obtenidas mediante un integrador numperico de precisión arbitraria.} \resultados{La RNA proporcionó soluciones precisas a un coste computacional fijo y 100 millones de veces más rápido que un solucionador de última generación.}\conclusiones{Demostraron que las redes neuronales artificiales profundas producen soluciones rápidas y precisas al problema de los tres cuerpos, que es un reto computacional, en un intervalo de tiempo fijo.}
+
+[8] Kahana A., et al. (2020),
+
+% 
+% 
+% Objetivos
+% 
+% 
+
+\section{Objetivos}
+\subsection{Objetivo General}
+% Implementar un modelo de red neuronal para dar solución a la ecuación de onda en dos dimensiones y evaluar la precisión en relación con el modelo clásico de resolución numérica.
+Implementar un modelo de red neuronal para dar una solución exacta, en relación con el modelo clásico de resolución numérica, a la ecuación de onda en dos dimensiones.
+\subsection{Objetivos Específicos}
+\begin{itemize}
+	\item Diseñar una arquitectura de RN para dar solución a la ecuación de onda en dos dimensiones.
+	\item Identificar los parámetros que afectan a la precisión del modelo implementado.
+	\item Evaluar la precisión de la arquitecura diseñada.
+	% \item Verificar la generalización fuera del dominio de entrenamiento.
+\end{itemize}
+
+% 
+% 
+% Justificación
+% 
+% 
+
+\section{Justificación}
+
+% \begin{itemize}
+% 	\item Ocurre que quiero saber como funcionan internamente las RNs para resolver las ecuaciones diferenciales de sistemas físicos. Y quiero dar a conocer que existe esta rama muy emocionante.
+% 	\item Planteas un sistema de ecuaciones diferenciales y a base de entrenamiento de la RN, el algoritmo extrapola los resultados fuera del dominio de entrenamiento.
+% 	\item Últimamente hay muchos avances y diferentes arquitecturas.
+% 	\item Se dá para sistemas físicos.
+% 	\item Investigaré el uso de la redes neuronales en la física, concretamente en la resolución del problema de la onda en dos dimensiones.
+% \end{itemize}
+% 					¿Qué se va hacer?
+% Se implementará una arquitectura de RN para dar solución a la ecuación de onda en dos dimensiones. 
+
+% La IA está teniendo un crecimiento en muchos campos de las ciencias. En las ciencias físicas hay avances, como los que resalta  \cite{Karniadakis2021}. Es importante investigar nuevas aplicaciones de la física, su nueva interacción con disciplinas que van surgiendo y potenciarse a la vez de ellas.  y, de la misma manera, potenciar el interés por disciplinas híbridas.
+
+% ¿Qué se va hacer?
+% Se implementará una estructura de red neuronal para la solución de la ecuación de onda.
+
+% ¿Por qué se va hacer?
+% La IA está teniendo un crecimiento en muchos campos de las ciencias. En las ciencias físicas hay avances, como los que resalta  \cite{Karniadakis2021}. \textcolor{red}{Porque} es importante investigar nuevas aplicaciones de la física, su nueva interacción con disciplinas que van surgiendo y potenciarse a la vez de ellas.
+
+% ¿Para qué se va hacer?
+% Para dar un enfoque distinto a la resolución de sistemas físicos (tal como planteamos en este trabajo) puede abrir nuevas fronteras de estudio
+
+% ¿Cómo se va hacer?
+% Inicialmente, se planteará un sistema de ecuaciones diferenciales y a través del entrenamiento de una RN, que será modificada en su estructura, lograremos restringer el espacio de soluciones para que el aprendizaje no sea aleatorio, sino que esté restringido a una solución real de un sistema físico, y de esta manera aproximarse a la solución numérica clásica de la ecuación de onda en dos dimensiones, también evaluaremos la precisión que tiene ese enfoque en comparación con los métodos clásicos de resolución de ED. Finalmente, el algoritmo debe ser capaz de extrapolar los resultados fuera del dominio de entrenamiento.
+
+Se implementará una estructura de red neuronal para la solución de la ecuación de onda. Ya que la IA está teniendo un crecimiento en muchos campos de las ciencias, en las ciencias físicas hay avances como los que resalta  \cite{Karniadakis2021}, es importante investigar nuevas aplicaciones de la física, su nueva interacción con disciplinas que van surgiendo y potenciarse a la vez de ellas. Realizamos este trabajo con un enfoque distinto a la resolución de sistemas físicos para abrir nuevas fronteras de estudio.
+
+Inicialmente, se planteará un sistema de ecuaciones diferenciales y a través del entrenamiento de una RN, que será modificada en su estructura, lograremos restringer el espacio de soluciones para que el aprendizaje no sea aleatorio, sino que esté restringido a una solución real de un sistema físico, y de esta manera aproximarse a la solución numérica clásica de la ecuación de onda en dos dimensiones, también evaluaremos la precisión que tiene ese enfoque en comparación con los métodos clásicos de resolución de ED. Finalmente, el algoritmo debe ser capaz de extrapolar los resultados fuera del dominio de entrenamiento.
+
+% Y posteriormente se 
+
+% ¿Por qué se va hacer?
+% Porque se busca relacionar la IA con la física.
+
+% ¿Para qué se va hacer?
+% Para dar entrada a un nuevo paradigma dentro de la facultad; integrar la física con la IA. Dar a conocer un nuevo enfoque de resolución de EDs y para que se despierte el interés por disciplinas híbridas. 
+
+% ¿Cómo se va hacer?
+
+% ¿Qué se necesita investigar?
+% Cómo actuán y cuál es el proces que realizan las RN para aproximar una ecuación diferencial. Es un campo en el cuál se está avanzando 
+
+% ¿Quiénes necesitan lo que se va investigar?
+% Lo necesitamos nosotros para saber como se integra la IA dentro de soluciones de EDs para obtener la dinámica de un sistema. 
+
+% 
+% 
+% Hipótesis
+% 
+% 
+
+\section{Hipótesis}
+%  ! El tipo de hipotesis es: HIPÓTESIS DE INVESTIGACIÓN: CAUSAL: bivariada o multivariada?.
+
+%  ! 	Hipótesis correlacional: alcanzan el nivel predictivo y parcialmente explicativo. No hay orden en las variables.
+%  !	Hipotesis CAUSAL: si hay un orden en las variables.
+% NOTE - En una hipótesis de correlación, el órden  en que coloquemos las variables  no es importante, no hay relación de causalidad. En la hipotesis de causalidad si hay un orden.
+
+
+% SECTION - son las guías de una investigación. Indican lo que tratamos de probar y se definen como explicaciones tentativas del fenómeno. Al formularse la hipótesis no estamos seguros de si serán ciertas. 
+
+% * Las hipótesis son proposiciones tentativas acerca de las relaciones entre dos o más variables.
+% ? ¿Que alcance tendrá la investigación?
+% TODO: Alcance descriptivo/explicativo.
+% ! No plantear la hipótesis de manera superficial: sin conocimiento alguno.
+
+% NOTE - Deben formularse a manera de PROPOSICIÓN.
+
+La aproximación a la solución de la ecuación de onda a travez de la red neuronal está vinculada linealmente con los parámetros y la estructura de la red neuronal. Dado la característica de aproximadores de funciones y generalizadores, podremos implementar una solución con una buen aproximación a la solución numérica.
+
+% Dado que las RNs son buenos aproximadores de funciones y generalizadores, podremos implementar una solución con una buena aproximación a la solución numérica. Y por las características de modificar parámetros en la estructura de la RN, podremos mejorar los resultados llegando a una solución cada vez más exactas. 
+
+% SECTION - La aproximación a la solución de la ecuación de onda a travez de la red neuronal está vinculada linealmente con los parámetros y la estructura de la red neuronal. Dado la característica de aproximadores de funciones y generalizadores, podremos implementar una solución con una buen aproximación a la solución numérica. 

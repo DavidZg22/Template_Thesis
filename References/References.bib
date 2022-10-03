@@ -1,0 +1,127 @@
+@article{Karniadakis2021,
+  abstract = {Despite great progress in simulating multiphysics problems using the numerical discretization of partial differential equations (PDEs), one still cannot seamlessly incorporate noisy data into existing algorithms, mesh generation remains complex, and high-dimensional problems governed by parameterized PDEs cannot be tackled. Moreover, solving inverse problems with hidden physics is often prohibitively expensive and requires different formulations and elaborate computer codes. Machine learning has emerged as a promising alternative, but training deep neural networks requires big data, not always available for scientific problems. Instead, such networks can be trained from additional information obtained by enforcing the physical laws (for example, at random points in the continuous space-time domain). Such physics-informed learning integrates (noisy) data and mathematical models, and implements them through neural networks or other kernel-based regression networks. Moreover, it may be possible to design specialized network architectures that automatically satisfy some of the physical invariants for better accuracy, faster training and improved generalization. Here, we review some of the prevailing trends in embedding physics into machine learning, present some of the current capabilities and limitations and discuss diverse applications of physics-informed learning both for forward and inverse problems, including discovering hidden physics and tackling high-dimensional problems.},
+  author   = {George Em Karniadakis and Ioannis G Kevrekidis and Lu Lu and Paris Perdikaris and Sifan Wang and Liu Yang},
+  doi      = {10.1038/s42254-021-00314-5},
+  issn     = {2522-5820},
+  issue    = {6},
+  journal  = {Nature Reviews Physics},
+  pages    = {422-440},
+  title    = {Physics-informed machine learning},
+  volume   = {3},
+  url      = {https://doi.org/10.1038/s42254-021-00314-5},
+  year     = {2021}
+}
+@article{Breen2019,
+  author = {Philip G. Breen and Christopher N. Foley and Tjarda Boekholt and Simon Portegies Zwart},
+  doi    = {10.1093/mnras/staa713},
+  month  = {10},
+  title  = {Newton vs the machine: solving the chaotic three-body problem using deep neural networks},
+  url    = {https://arxiv.org/abs/1910.07291},
+  year   = {2019}
+}
+@article{Raissi2017,
+  abstract = {We introduce physics informed neural networks -- neural networks that are trained to solve supervised learning tasks while respecting any given law of physics described by general nonlinear partial differential equations. In this two part treatise, we present our developments in the context of solving two main classes of problems: data-driven solution and data-driven discovery of partial differential equations. Depending on the nature and arrangement of the available data, we devise two distinct classes of algorithms, namely continuous time and discrete time models. The resulting neural networks form a new class of data-efficient universal function approximators that naturally encode any underlying physical laws as prior information. In this first part, we demonstrate how these networks can be used to infer solutions to partial differential equations, and obtain physics-informed surrogate models that are fully differentiable with respect to all input coordinates and free parameters.},
+  author   = {Maziar Raissi and Paris Perdikaris and George Em Karniadakis},
+  month    = {11},
+  title    = {Physics Informed Deep Learning (Part I): Data-driven Solutions of Nonlinear Partial Differential Equations},
+  url      = {http://arxiv.org/abs/1711.10561},
+  year     = {2017}
+}
+@article{Raissi2017,
+  abstract = {We introduce physics informed neural networks -- neural networks that are trained to solve supervised learning tasks while respecting any given law of physics described by general nonlinear partial differential equations. In this second part of our two-part treatise, we focus on the problem of data-driven discovery of partial differential equations. Depending on whether the available data is scattered in space-time or arranged in fixed temporal snapshots, we introduce two main classes of algorithms, namely continuous time and discrete time models. The effectiveness of our approach is demonstrated using a wide range of benchmark problems in mathematical physics, including conservation laws, incompressible fluid flow, and the propagation of nonlinear shallow-water waves.},
+  author   = {Maziar Raissi and Paris Perdikaris and George Em Karniadakis},
+  month    = {11},
+  title    = {Physics Informed Deep Learning (Part II): Data-driven Discovery of Nonlinear Partial Differential Equations},
+  url      = {http://arxiv.org/abs/1711.10566},
+  year     = {2017}
+}
+@article{Nguyen2021,
+  author = {Hieu Nguyen and Richard Tsai},
+  month  = {7},
+  title  = {Numerical wave propagation aided by deep learning},
+  url    = {https://arxiv.org/abs/2107.13184},
+  year   = {2021}
+}
+@article{Scellier2021,
+  abstract = {In the last decade, deep learning has become a major component of artificial intelligence. The workhorse of deep learning is the optimization of loss functions by stochastic gradient descent (SGD). Traditionally in deep learning, neural networks are differentiable mathematical functions, and the loss gradients required for SGD are computed with the backpropagation algorithm. However, the computer architectures on which these neural networks are implemented and trained suffer from speed and energy inefficiency issues, due to the separation of memory and processing in these architectures. To solve these problems, the field of neuromorphic computing aims at implementing neural networks on hardware architectures that merge memory and processing, just like brains do. In this thesis, we argue that building large, fast and efficient neural networks on neuromorphic architectures also requires rethinking the algorithms to implement and train them. We present an alternative mathematical framework, also compatible with SGD, which offers the possibility to design neural networks in substrates that directly exploit the laws of physics. Our framework applies to a very broad class of models, namely those whose state or dynamics are described by variational equations. This includes physical systems whose equilibrium state minimizes an energy function, and physical systems whose trajectory minimizes an action functional. We present a simple procedure to compute the loss gradients in such systems, called equilibrium propagation (EqProp), which requires solely locally available information for each trainable parameter. Since many models in physics and engineering can be described by variational principles, our framework has the potential to be applied to a broad variety of physical systems whose applications extend to various fields of engineering, beyond neuromorphic computing.},
+  author   = {Benjamin Scellier},
+  month    = {3},
+  title    = {A deep learning theory for neural networks grounded in physics},
+  url      = {http://arxiv.org/abs/2103.09985},
+  year     = {2021}
+}
+@article{Iten2018,
+  author = {Raban Iten and Tony Metger and Henrik Wilming and Lidia del Rio and Renato Renner},
+  doi    = {10.1103/physrevlett.124.010508},
+  month  = {7},
+  title  = {Discovering physical concepts with neural networks},
+  url    = {https://arxiv.org/abs/1807.10300},
+  year   = {2018}
+}
+@article{Rumelhart1986,
+  abstract = {We describe a new learning procedure, back-propagation, for networks of neurone-like units. The procedure repeatedly adjusts the weights of the connections in the network so as to minimize a measure of the difference between the actual output vector of the net and the desired output vector. As a result of the weight adjustments, internal ‘hidden’ units which are not part of the input or output come to represent important featur es of the task domain, and the regularities in the task are captured by the interactions of these units. The ability to create useful new features distinguishes back-propagation from earlier, simpler methods such as the perceptron-convergence procedure1.},
+  author   = {David E Rumelhart and Geoffrey E Hinton and Ronald J Williams},
+  doi      = {10.1038/323533a0},
+  issn     = {1476-4687},
+  issue    = {6088},
+  journal  = {Nature},
+  pages    = {533-536},
+  title    = {Learning representations by back-propagating errors},
+  volume   = {323},
+  url      = {https://doi.org/10.1038/323533a0},
+  year     = {1986}
+}
+@book{Christopher2006,
+  author    = {Christopher M. Bishop},
+  editor    = {Springer-Verlag New York},
+  publisher = {Springer New York},
+  title     = {Pattern Recognition and Machine Learning},
+  year      = {2006}
+}
+@article{McCulloch1943,
+  abstract = {Because of the “all-or-none” character of nervous activity, neural events and the relations among them can be treated by means of propositional logic. It is found that the behavior of every net can be described in these terms, with the addition of more complicated logical means for nets containing circles; and that for any logical expression satisfying certain conditions, one can find a net behaving in the fashion it describes. It is shown that many particular choices among possible neurophysiological assumptions are equivalent, in the sense that for every net behaving under one assumption, there exists another net which behaves under the other and gives the same results, although perhaps not in the same time. Various applications of the calculus are discussed.},
+  author   = {Warren S McCulloch and Walter Pitts},
+  doi      = {10.1007/BF02478259},
+  issn     = {1522-9602},
+  issue    = {4},
+  journal  = {The bulletin of mathematical biophysics},
+  pages    = {115-133},
+  title    = {A logical calculus of the ideas immanent in nervous activity},
+  volume   = {5},
+  url      = {https://doi.org/10.1007/BF02478259},
+  year     = {1943}
+}
+@techreport{Rosenblatt1957,
+  author      = {Frank Rosenblatt},
+  institution = {Cornell Aeronautical Laboratory},
+  title       = {The perceptron a perceiving and recognizing automaton},
+  year        = {1957},
+  url         = {https://goo.gl/17Fprk}
+}
+@article{Hornik1989,
+  title    = {Multilayer feedforward networks are universal approximators},
+  journal  = {Neural Networks},
+  volume   = {2},
+  number   = {5},
+  pages    = {359-366},
+  year     = {1989},
+  issn     = {0893-6080},
+  doi      = {https://doi.org/10.1016/0893-6080(89)90020-8},
+  url      = {https://www.sciencedirect.com/science/article/pii/0893608089900208},
+  author   = {Kurt Hornik and Maxwell Stinchcombe and Halbert White},
+  keywords = {Feedforward networks, Universal approximation, Mapping networks, Network representation capability, Stone-Weierstrass Theorem, Squashing functions, Sigma-Pi networks, Back-propagation networks},
+  abstract = {This paper rigorously establishes that standard multilayer feedforward networks with as few as one hidden layer using arbitrary squashing functions are capable of approximating any Borel measurable function from one finite dimensional space to another to any desired degree of accuracy, provided sufficiently many hidden units are available. In this sense, multilayer feedforward networks are a class of universal approximators.}
+}
+@article{Cybenko1989,
+  abstract = {In this paper we demonstrate that finite linear combinations of compositions of a fixed, univariate function and a set of affine functionals can uniformly approximate any continuous function ofn real variables with support in the unit hypercube; only mild conditions are imposed on the univariate function. Our results settle an open question about representability in the class of single hidden layer neural networks. In particular, we show that arbitrary decision regions can be arbitrarily well approximated by continuous feedforward neural networks with only a single internal, hidden layer and any continuous sigmoidal nonlinearity. The paper discusses approximation properties of other possible types of nonlinearities that might be implemented by artificial neural networks.},
+  author   = {G Cybenko},
+  doi      = {10.1007/BF02551274},
+  issn     = {1435-568X},
+  issue    = {4},
+  journal  = {Mathematics of Control, Signals and Systems},
+  pages    = {303-314},
+  title    = {Approximation by superpositions of a sigmoidal function},
+  volume   = {2},
+  url      = {https://doi.org/10.1007/BF02551274},
+  year     = {1989}
+}
